@@ -14,9 +14,12 @@ body {
 	margin: 0 auto;
 }
 
+/*MENU //////////////////////////*/
 
+
+/*HEADER ////////////////////////////////////*/
 header {
-	background-image: url("../images/background.jpeg");
+	background-image: url("../images/2000px_background.jpg");
 	background-size: 100%;
 	background-blend-mode: soft-light;
 	background-color: #393E46;
@@ -30,6 +33,7 @@ header {
 
 .titre img {
 	width: 30%;
+	color: #00FFF5;
 }
 
 
@@ -37,16 +41,6 @@ header {
 	color: white;
 	font-size: 1em;
 	font-weight: normal;
-}
-
-/*////////////////////////////////*/
-.presentation {
-	margin: 10% 0;
-	text-align: justify;
-}
-
-.presentation p {
-	line-height: 1.5em;
 }
 
 /*///////////////////////////////*/
@@ -64,26 +58,47 @@ header {
 
 .suivre {
 	margin-top: 5%;
+
 }
+
+.suivre a img {
+	width: 26px;
+	height: 26px;
+}
+
 
 .suivre a {
 	color: white;
 	padding: 0 2%;
 }
 
-.suivre a:hover {
-	color: #00ADB5;
+.suivre a:hover, .suivre a img:hover {
+	opacity: 0.8;
 }
 
-.suivre a:first-child {
+.suivre a:nth-child(1) {
 	border-right: 1px solid white;
 }
 
-.suivre a:last-child {
-	border-left: 1px solid white;
+.suivre a:nth-child(2) {
+	border-right: 1px solid white;
 }
 
-/*///////////////////////////////*/
+.suivre a:nth-child(3) {
+	border-right: 1px solid white;
+}
+
+/*PRESENTATION ////////////////////////////////*/
+.presentation {
+	margin: 10% 0;
+	text-align: justify;
+}
+
+.presentation p {
+	line-height: 1.5em;
+}
+
+/* PARCOURS ///////////////////////////////*/
 h2 {
 	text-align: center;
 	text-transform: uppercase;
@@ -149,7 +164,7 @@ h2 {
 	width: 100%;
 }
 
-/*////////////////////////////////*/
+/*CAROUSSEL////////////////////////////////*/
 .caroussel {
 	margin-top: 5%;
 	margin-bottom: 10%;
@@ -332,119 +347,119 @@ input {
 				}
 
 				/*FOOTER ///////////////////////////////*/
-					footer {
-						display: flex;
-						flex-direction: column;
-						background-color: #14171C;
-						padding-top: 5%;
-					}
+				footer {
+					display: flex;
+					flex-direction: column;
+					background-color: #14171C;
+					padding-top: 5%;
+				}
 
-					.footer_ligne {
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						margin-bottom: 7%;
-						/*align-items: center;*/
-					}
+				.footer_ligne {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					margin-bottom: 7%;
+					/*align-items: center;*/
+				}
 
-					.footer_ligne:first-child {
-						padding-bottom: 7%;
-						border-bottom: 1px solid white;
-					}
+				.footer_ligne:first-child {
+					padding-bottom: 7%;
+					border-bottom: 1px solid white;
+				}
 
-					.footer_col {
-						display: flex;
-						flex-direction: column;
-						justify-content: space-between;
-						width: 40%;
-					}
+				.footer_col {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					width: 40%;
+				}
 
-					footer p {
-						color: white;
-						line-height: 1.5em;
-					}
+				footer p {
+					color: white;
+					line-height: 1.5em;
+				}
 
-					footer p.bleu {
-						color: #00FFF5;
-						padding-bottom: 10px;
-					}
+				footer p.bleu {
+					color: #00FFF5;
+					padding-bottom: 10px;
+				}
 
-					/*gestion partie droite*/
-					.footer_part1col2 a, .footer_part2col2 a{
-						text-decoration: none;
-						color: white;
-					}
+				/*gestion partie droite*/
+				.footer_part1col2 a, .footer_part2col2 a{
+					text-decoration: none;
+					color: white;
+				}
 
-					.footer_part1col2 a:hover, .footer_part2col2 a:hover {
-						color: #393E46; 
-					}
+				.footer_part1col2 a:hover, .footer_part2col2 a:hover {
+					color: #393E46; 
+				}
 
-					/*gestion part 1 droite*/
-					.footer_part1col2 {
-						display: flex;
-						justify-content: space-between;
-					}
+				/*gestion part 1 droite*/
+				.footer_part1col2 {
+					display: flex;
+					justify-content: space-between;
+				}
 
-					.footer_part1col2 a {
-						text-align: center;
-					}
+				.footer_part1col2 a {
+					text-align: center;
+				}
 
-					.footer_part1col2 a:nth-child(1) {
-						border-right: 1px solid white;
-						text-align: right;
-						padding-right: 20%;
-					}
+				.footer_part1col2 a:nth-child(1) {
+					border-right: 1px solid white;
+					text-align: right;
+					padding-right: 20%;
+				}
 
-					.footer_part1col2 a:nth-child(2) {
-						border-right: 1px solid white;
-						text-align: right;
-						padding-right: 20%;
-					}
+				.footer_part1col2 a:nth-child(2) {
+					border-right: 1px solid white;
+					text-align: right;
+					padding-right: 20%;
+				}
 
-					.footer_part1col2 a:nth-child(3) {
-						text-align: right;
-					}
+				.footer_part1col2 a:nth-child(3) {
+					text-align: right;
+				}
 
-					/*partie 2 droite - alignement*/
-					.footer_part2col2 {
-						text-align: right;
-					}
+				/*partie 2 droite - alignement*/
+				.footer_part2col2 {
+					text-align: right;
+				}
 
-					/*logos partenaires*/
-					.partenaire {
-						width: 20%;
-					}
+				/*logos partenaires*/
+				.partenaire {
+					width: 20%;
+				}
 
-					.partenaire img {
-						width: 100%;
-					}
+				.partenaire img {
+					width: 100%;
+				}
 
-					.partenaire:nth-child(1) {
-						flex: 2.34;
-					}
+				.partenaire:nth-child(1) {
+					flex: 2.34;
+				}
 
-					.partenaire:nth-child(2) {
-						flex: 2.77;
-						padding: 0 5%;
-					}
+				.partenaire:nth-child(2) {
+					flex: 2.77;
+					padding: 0 5%;
+				}
 
-					.partenaire:nth-child(3) {
-						flex: 1;
-					}
+				.partenaire:nth-child(3) {
+					flex: 1;
+				}
 
-					.partenaire:nth-child(4) {
-						flex: 3.29;
-						padding: 0 5%;
-					}
+				.partenaire:nth-child(4) {
+					flex: 3.29;
+					padding: 0 5%;
+				}
 
-					.partenaire:nth-child(5) {
-						flex: 2;
-					}
+				.partenaire:nth-child(5) {
+					flex: 2;
+				}
 
-					/*mentions légales*/
-					.mentions {
-						color: #00FFF5;
-						width: 100%;
-						text-align: center;
-						font-size: 0.7em;
-					}
+				/*mentions légales*/
+				.mentions {
+					color: #00FFF5;
+					width: 100%;
+					text-align: center;
+					font-size: 0.7em;
+				}
