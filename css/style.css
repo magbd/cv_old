@@ -14,7 +14,7 @@ body {
 	margin: 0 auto;
 }
 
-/*MENU //////////////////////////*/
+/*MENU //////////////////////////////////*/
 
 
 /*HEADER ////////////////////////////////////*/
@@ -87,6 +87,8 @@ header {
 .suivre a:nth-child(3) {
 	border-right: 1px solid white;
 }
+
+
 
 /*PRESENTATION ////////////////////////////////*/
 .presentation {
