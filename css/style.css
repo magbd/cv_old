@@ -16,14 +16,17 @@ body {
 
 /*MENU //////////////////////////////////*/
 #menu {
-	position: absolute;
-	text-align: center;
+	position: fixed;
+	text-align: right;
 	width: 100%;
 	top: 20px;
+	right: 20px;
+	color: #0C4762;
 }
 
 #menu .burger {
   display: inline-block;
+  /*position: fixed;*/
   border: 0;
   background: none;
   outline: 0;
@@ -88,6 +91,7 @@ body {
 }
 
 #menu .navigation {
+	/*position: fixed;*/
   overflow: hidden;
   max-height: 0;
   -webkit-transition: max-height 0.5s ease-in-out;
@@ -113,9 +117,9 @@ body {
   color: inherit;
 }
 
-#menu small {
+/*#menu small {
   font-size: 14px;
-}
+}*/
 
 #menu ul {
   margin: 0;
@@ -124,14 +128,15 @@ body {
 
 #menu li {
   list-style: none;
-  font-size: 25px;
+  font-size: 1em;
   padding: 5px 0;
 }
 #menu li a {
   text-decoration: none;
 }
 #menu li a:hover {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  color: #00ADB5;
 }
 
 
@@ -210,12 +215,12 @@ header {
 
 
 /*PRESENTATION ////////////////////////////////*/
-.presentation {
-	margin: 10% 0;
+#presentation {
+	padding: 10% 0;
 	text-align: justify;
 }
 
-.presentation p {
+#presentation p {
 	line-height: 1.5em;
 }
 
@@ -228,7 +233,7 @@ h2 {
 	color: #00ADB5;
 }
 
-.parcours {
+#parcours {
 	background-color: #ECF0F1;
 	padding: 5% 0;
 	text-align: justify;
@@ -390,7 +395,7 @@ input {
 				/*.caroussel_diapo1 #carou_huit:checked ~ .contenu_carou1 .caroussel1 img:nth-child(8){-webkit-transform:rotateY(315deg) translateZ(540px) scale(1);transform:rotateY(315deg) translateZ(540px) scale(1);opacity:1}*/
 
 				/*///////////////////////////*/
-				.competences {
+				#competences {
 					display: flex;
 					flex-direction: column;
 					background-color: #ECF0F1;
@@ -403,13 +408,13 @@ input {
 					margin-bottom: 1em;
 				}
 
-				.web {
+				#competences .web {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
 				}
 
-				.pictos {
+				#competences .pictos {
 					display: flex;
 					flex-direction: row;
 					justify-content: center;
@@ -420,7 +425,7 @@ input {
 
 				}
 
-				.pao {
+				#competences .pao {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -429,7 +434,7 @@ input {
 				}
 
 
-				.element {
+				#competences .element {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
@@ -437,18 +442,18 @@ input {
 					margin: 5%;
 				}
 
-				.element img {
+				#competences .element img {
 					width: 100px;
 				}
 
-				/*MORE //////////////////////////////*/
-				.more {
+				/*SAVOIR FAIRE //////////////////////////////*/
+				#savoir {
 					display: flex;
 					flex-direction: column;
 					padding: 5% 0 10% 0;
 				}
 
-				.more_ligne {
+				#savoir .ligne {
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
@@ -456,14 +461,14 @@ input {
 					
 				}
 
-				.more_col {
+				#savoir .col {
 					display: flex;
 					flex-direction: column;
 					width: 40%
 
 				}
 
-				.more hr {
+				#savoir hr {
 					margin-bottom: 15px;
 				}
 
@@ -557,6 +562,7 @@ input {
 
 				.partenaire:nth-child(1) {
 					flex: 2.34;
+
 				}
 
 				.partenaire:nth-child(2) {
@@ -571,6 +577,8 @@ input {
 				.partenaire:nth-child(4) {
 					flex: 3.29;
 					padding: 0 5%;
+					/*filter: invert(1);*/
+					/*background-color: white;*/
 				}
 
 				.partenaire:nth-child(5) {
