@@ -26,6 +26,7 @@ body {
 
 #menu .burger {
   display: inline-block;
+
   /*position: fixed;*/
   border: 0;
   background: none;
