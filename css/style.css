@@ -140,8 +140,6 @@ body {
   color: #00ADB5;
 }
 
-
-
 /*HEADER ////////////////////////////////////*/
 header {
 	background-image: url("../images/2000px_background.jpg");
@@ -151,7 +149,7 @@ header {
 	text-align: center;
 	color: white
 }
-
+/*--------------------------*/
 .titre {
 	padding: 10% 0;
 }
@@ -167,10 +165,9 @@ header {
 	font-size: 1em;
 	font-weight: normal;
 }
-
-/*///////////////////////////////*/
+/*--------------------------*/
 .downloadcv {
-	margin-top: 5%;
+	margin: 5% 0;
 
 }
 
@@ -180,10 +177,15 @@ header {
 	padding: 1% 2%;
 	border: solid #00FFF5 1px;
 }
-
+/*--------------------------*/
 .suivre {
-	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+}
 
+.suivre a {
+	padding: 0 2%;
+	color: white;
 }
 
 .suivre a img {
@@ -191,29 +193,13 @@ header {
 	height: 26px;
 }
 
-
-.suivre a {
-	color: white;
-	padding: 0 2%;
+.suivre i, .suivre img {
+	transition: transform 1s;
 }
 
-.suivre a:hover, .suivre a img:hover {
-	opacity: 0.8;
+.suivre i:hover, .suivre img:hover {
+	transform: scale(2);
 }
-
-.suivre a:nth-child(1) {
-	border-right: 1px solid white;
-}
-
-.suivre a:nth-child(2) {
-	border-right: 1px solid white;
-}
-
-.suivre a:nth-child(3) {
-	border-right: 1px solid white;
-}
-
-
 
 /*PRESENTATION ////////////////////////////////*/
 #presentation {
@@ -515,10 +501,12 @@ input {
 				.footer_part1col2 a, .footer_part2col2 a{
 					text-decoration: none;
 					color: white;
+					
 				}
 
 				.footer_part1col2 a:hover, .footer_part2col2 a:hover {
 					color: #393E46; 
+
 				}
 
 				/*gestion part 1 droite*/
