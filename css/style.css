@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
-
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
 
 body {
 	margin: 0 auto;
@@ -143,7 +143,8 @@ body {
 /*HEADER ////////////////////////////////////*/
 header {
 	background-image: url("../images/2000px_background.jpg");
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-blend-mode: soft-light;
 	background-color: #393E46;
 	text-align: center;
@@ -164,40 +165,95 @@ header {
 	color: white;
 	font-size: 1em;
 	font-weight: normal;
+	margin-bottom: 2%;
 }
 /*--------------------------*/
 .downloadcv {
-	margin: 5% 0;
+	margin-bottom: 3%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/*align-items: center;*/
 
 }
+
+.downloadcv div:nth-child(1) {
+	/*justify-content: flex-end;*/
+	text-align: right;
+}
+
+.downloadcv div:nth-child(2) {
+	align-self: flex-end;
+}
+
+
+.downloadcv div	{
+	width: 20%;
+}
+
+.downloadcv div p, .suivre div p {
+	font-family: 'Shadows Into Light Two', cursive;
+	color: #A8D8EA;
+}
+
+.downloadcv img {
+	width: 15%;
+}
+
+
 
 .downloadcv a {
 	text-decoration: none;
 	color: #00FFF5;
-	padding: 1% 2%;
+	padding: 5% 5%;
 	border: solid #00FFF5 1px;
 }
 /*--------------------------*/
 .suivre {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.suivre div {
+	width: 20%;
+}
+
+.suivre div:nth-child(2) {
+	align-self: flex-end;
+}
+
+.suivre div:nth-child(3) {
+	text-align: left;
+}
+
+.suivre div:nth-child(3) img {
+	width: 15%;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 
 .suivre a {
-	padding: 0 2%;
+	padding: 0 5%;
 	color: white;
 }
 
-.suivre a img {
+.social_icon a img {
 	width: 26px;
 	height: 26px;
 }
 
-.suivre i, .suivre img {
+.social_icon i, .social_icon img {
 	transition: transform 1s;
 }
 
-.suivre i:hover, .suivre img:hover {
+.social_icon i:hover, .social_icon img:hover {
 	transform: scale(2);
 }
 
