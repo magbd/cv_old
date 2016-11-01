@@ -181,7 +181,18 @@ header {
 .downloadcv div:nth-child(1) {
 	/*justify-content: flex-end;*/
 	text-align: right;
+	
 }
+
+/*.downloadcv p, .downloadcv img {
+	animation-duration: 3s;
+  	animation-name: visible;
+}
+
+@keyframes visible {
+	from {visibility: hidden;}
+	to {visibility: visible}
+}*/
 
 .downloadcv div:nth-child(2) {
 	align-self: flex-end;
@@ -200,14 +211,28 @@ header {
 .downloadcv img {
 	width: 15%;
 }
+/*ANIMATION*/
+.downloadcv div p, .downloadcv div img {
+	 animation-duration: 3s;
+  	animation-name: slideleft;
+}
 
 
+@keyframes slideleft {
+  from {
+    margin-right: 50%;
+  }
 
+  to {
+   margin-right: 0;
+  }
+}
+/*-----*/
 .downloadcv a {
 	text-decoration: none;
 	color: #00FFF5;
 	padding: 5% 5%;
-	border: solid #00FFF5 1px;
+	border: solid #00FFF5 2px;
 }
 /*--------------------------*/
 .suivre {
@@ -248,7 +273,7 @@ header {
 	width: 26px;
 	height: 26px;
 }
-
+/*ANIMATION TAILLE LOGOS*/
 .social_icon i, .social_icon img {
 	transition: transform 1s;
 }
@@ -256,6 +281,24 @@ header {
 .social_icon i:hover, .social_icon img:hover {
 	transform: scale(2);
 }
+/*-----*/
+/*ANIMATION*/
+.suivre div p, .arrow {
+	 animation-duration: 3s;
+  	animation-name: slideright;
+}
+
+
+@keyframes slideright {
+  from {
+    margin-left: 50%;
+  }
+
+  to {
+   margin-left: 0;
+  }
+}
+/*-----*/
 
 /*PRESENTATION ////////////////////////////////*/
 #presentation {
