@@ -169,50 +169,52 @@ header {
 }
 /*--------------------------*/
 .downloadcv {
-	margin-bottom: 3%;
+	margin-bottom: 1%;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	/*align-items: center;*/
-
 }
 
-.downloadcv div:nth-child(1) {
+.cv_left, .cv_right {
 	/*justify-content: flex-end;*/
 	text-align: right;
-	
+	width: 40%;
 }
 
-/*.downloadcv p, .downloadcv img {
-	animation-duration: 3s;
-  	animation-name: visible;
+.cv_left img {
+	width: 8%;
 }
 
-@keyframes visible {
-	from {visibility: hidden;}
-	to {visibility: visible}
-}*/
-
-.downloadcv div:nth-child(2) {
+.cv_center {
+	display: flex;
+	justify-content: center;
 	align-self: flex-end;
-}
-
-
-.downloadcv div	{
 	width: 20%;
 }
 
-.downloadcv div p, .suivre div p {
+.border {
+	width: 80%;
+	border: solid #00FFF5 2px;
+	padding: 8px;
+}
+
+.downloadcv a {
+	text-decoration: none;
+	color: #00FFF5;
+	/*padding: 5% 5%;*/
+	/*border: solid #00FFF5 2px;*/
+}
+
+
+.cv_left p, .suivre div p {
 	font-family: 'Shadows Into Light Two', cursive;
 	color: #A8D8EA;
 }
 
-.downloadcv img {
-	width: 15%;
-}
 /*ANIMATION*/
-.downloadcv div p, .downloadcv div img {
+.cv_left p, .cv_left img {
 	 animation-duration: 3s;
   	animation-name: slideleft;
 }
@@ -228,12 +230,6 @@ header {
   }
 }
 /*-----*/
-.downloadcv a {
-	text-decoration: none;
-	color: #00FFF5;
-	padding: 5% 5%;
-	border: solid #00FFF5 2px;
-}
 /*--------------------------*/
 .suivre {
 	display: flex;
@@ -242,24 +238,26 @@ header {
 	width: 100%;
 }
 
-.suivre div {
+.suivre_right, .suivre_left {
+	width: 40%;
+}
+
+.social_icon {
+	align-self: flex-end;
 	width: 20%;
 }
 
-.suivre div:nth-child(2) {
-	align-self: flex-end;
-}
-
-.suivre div:nth-child(3) {
+.suivre_right {
 	text-align: left;
 }
 
-.suivre div:nth-child(3) img {
-	width: 15%;
+.suivre_right img {
+	width: 8%;
+	transform: scaleX(-1);
+	/*transformation pour différents navigateur*/
 	-moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
 }
@@ -283,7 +281,7 @@ header {
 }
 /*-----*/
 /*ANIMATION*/
-.suivre div p, .arrow {
+.suivre_right p, .arrow {
 	 animation-duration: 3s;
   	animation-name: slideright;
 }
@@ -299,7 +297,48 @@ header {
   }
 }
 /*-----*/
-
+/*HEADER RESPONSIVE////////////////*/
+@media (max-width:768px) {
+	.titre img {
+	    width: 40%;
+	}
+	.titre h1 {
+		font-size: 0.5em;
+	}
+	.downloadcv a  {
+		font-size: 0.5em;
+	}
+	.border {
+		border: solid #00FFF5 1px;
+		padding: 4px;
+	}
+	.cv_center {
+		width: 40%;
+	}
+	.social_icon {
+		width: 50%;
+	}
+	.cv_left, .cv_right {
+		width: 30%;
+	}
+	.suivre_right, .suivre_left{
+		width: 25%;
+	}
+	.cv_left img {
+    /*width: 7%;*/
+	}
+	.cv_left p, .suivre p {
+		font-size: 0.6em;
+	}
+	.fa-2x {
+    font-size: 1em;
+	}
+	.suivre .social_icon a img {
+		width: 15px;
+		height: 15px;
+	}
+}
+/*FIN HEADER RESPONSIVE////////////////*/
 /*PRESENTATION ////////////////////////////////*/
 #presentation {
 	padding: 10% 0;
@@ -399,7 +438,7 @@ input {
 *{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}
 /*****carrousel 3d avec navigation*****/
 
-.caroussel_diapo1{	
+.caroussel_diapo1{
 	position:relative;
 	text-align:center;
 	margin:0 auto;
@@ -408,7 +447,7 @@ input {
 
 
 .contenu_carou1 {
-	text-align:left;	
+	text-align:left;
 	width:500px;
 	height:332px;
 	margin:10px auto 40px auto;
@@ -433,7 +472,7 @@ input {
 			backface-visibility:hidden;
 			transition:1s}
 
-			.caroussel1 img{filter:blur(3px);-webkit-filter:blur(3px);opacity:.8}	
+			.caroussel1 img{filter:blur(3px);-webkit-filter:blur(3px);opacity:.8}
 			.caroussel1 img:nth-child(1){-webkit-transform:translate3d(0,0,270px) scale(.8);transform:translate3d(0,0,270px) scale(.8)}
 			.caroussel1 img:nth-child(2){-webkit-transform:rotateY(90deg) translateZ(270px) scale(.8);transform:rotateY(90deg) translateZ(270px) scale(.8)}
 			.caroussel1 img:nth-child(3){-webkit-transform:rotateY(180deg) translateZ(270px) scale(.8);transform:rotateY(180deg) translateZ(270px) scale(.8)}
@@ -457,7 +496,7 @@ input {
 
 
 
-				.caroussel_diapo1 input[name="rotation"]:checked ~ .contenu_carou1 .caroussel1 img:nth-child(n){filter:drop-shadow(12px 12px 7px hsla(0,0%,0%,.5))}	
+				.caroussel_diapo1 input[name="rotation"]:checked ~ .contenu_carou1 .caroussel1 img:nth-child(n){filter:drop-shadow(12px 12px 7px hsla(0,0%,0%,.5))}
 
 				/*gauche*/
 				.caroussel_diapo1 #carou_un:checked ~ .contenu_carou1 .caroussel1{-webkit-transform:translateZ(-270px);transform:translateZ(-270px)}
@@ -506,9 +545,11 @@ input {
 					justify-content: center;
 					align-items: stretch;
 					width: 100%;
-					border-top: solid 1px black; 
+					/*border-top: solid 1px black;*/
 					padding: 20px;
-
+				}
+				#competences .ligne1{
+					border-top: solid 1px black;
 				}
 
 				#competences .pao {
@@ -525,13 +566,16 @@ input {
 					flex-direction: column;
 					justify-content: space-between;
 					text-align: center;
-					margin: 5%;
+					margin: 4%;
 				}
 
-				#competences .element img {
-					width: 100px;
+				#competences .pao img {
+					width: 80px;
 				}
 
+				#competences .web img {
+					width: 70px;
+				}
 				/*SAVOIR FAIRE //////////////////////////////*/
 				#savoir {
 					display: flex;
@@ -544,7 +588,7 @@ input {
 					flex-direction: row;
 					justify-content: space-between;
 					margin-top: 50px;
-					
+
 				}
 
 				#savoir .col {
@@ -600,11 +644,11 @@ input {
 				.footer_part1col2 a, .footer_part2col2 a{
 					text-decoration: none;
 					color: white;
-					
+
 				}
 
 				.footer_part1col2 a:hover, .footer_part2col2 a:hover {
-					color: #393E46; 
+					color: #393E46;
 
 				}
 
